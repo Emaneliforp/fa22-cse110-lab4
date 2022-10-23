@@ -16,23 +16,23 @@
     D. student['Favorite Teacher'].name
     E. student.courseLoad[0]
 13. 
-    A. '3' + 2 => '32' //add explanation
-    B. '3' - 2 => 1
-    C. 3 + null => 3
-    D. '3' + null => '3null'
-    E. true + 3 => 4
-    F. false + null => 0
-    G. '3' + undefined => '3undefined'
-    H. '3' - undefined => NaN
+    A. '3' + 2 => '32', '3' casted to string so 2 is concatenated
+    B. '3' - 2 => 1, - isn't a concatenation operation so 3 is taken as integer
+    C. 3 + null => 3, null casted to integer
+    D. '3' + null => '3null', '3' casted to string so null is concatenated
+    E. true + 3 => 4, true is 1
+    F. false + null => 0, both are casted to integer
+    G. '3' + undefined => '3undefined', '3' casted to string so undefined is concatenated
+    H. '3' - undefined => NaN, - isn't a concatenation operation so 3 is taken as integer
 14. 
-    A. '2' > 1 => true
-    B. '2' < '12' => false
-    C. 2 == '2' => true
-    D. 2 === '2' => false
-    E. true == 2 => false
-    F. true === Boolean(2) => true
+    A. '2' > 1 => true, '2' is casted to integer
+    B. '2' < '12' => false, in string comparison first character is more significant, '2' > '1'
+    C. 2 == '2' => true, '2' is casted to integer
+    D. 2 === '2' => false, === checks type so integer and string aren't equal
+    E. true == 2 => false, true is 1
+    F. true === Boolean(2) => true, Boolean(2) is true
 15. == only checks if the values are equal, === also checks if the values are the same type.
-17. It will return [2, 4, 6].
+16. It will return [2, 4, 6].
     Explanation:
     array = [1, 2, 3]
     callback = doSomething
@@ -47,7 +47,7 @@
     - Iteration 3: callback(arr[2]) is called which is equivalent to doSomething(3) which return 6.
 
     Then the results are added accordingly. Thus, the returned newArr is [2, 4, 6]
-19. 1
+17. 1
     4
     3
     2 
